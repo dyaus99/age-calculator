@@ -1,5 +1,6 @@
 const btn = document.getElementById("btn")
 const dob = document.getElementById("dob")
+const result = document.getElementById("result")
 
 function calculateAge(){
     const dobVal = dob.value
@@ -7,7 +8,7 @@ function calculateAge(){
         alert("Please Enter Your Date of Birth.")
     }else{
         const age = getAge(dobVal)
-        console.log(age)
+        result.innerText = `You are ${age} ${age <= 1 ? "Year" : "Years"} Old.`
     }
 }
 
